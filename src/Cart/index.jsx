@@ -88,7 +88,7 @@ const Cart = ({ handleClose, open }) => {
         </ListItem>
         ))}
         <ListItem>
-        {cart.map(item => {totales += item.price;})};
+        {cart.map(item => {totales += parseInt(item.price)})};
         {totales}
         </ListItem>
         </List>
