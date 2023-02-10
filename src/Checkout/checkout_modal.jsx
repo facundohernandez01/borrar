@@ -24,7 +24,7 @@ const { cart, vaciarCarrito } = useContext(CartContext);
 const [finalizada, setFinalizada] = useState(false);
 function handleClose() {
         setFinalizada(false);
-        window.history.back();
+        window.history.back(-2);
 }
 
 const [inputNombre, setInputNombre] = useState("");
