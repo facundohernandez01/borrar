@@ -14,20 +14,21 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import { Snackbar } from '@mui/material';
-import { Redirect } from 'react-router-dom/es/Redirect';
+import { useHistory } from 'react-router-dom';
 
   const [redirectToHome, setRedirectToHome] = useState(false);
 
 
 
 export function ConfirmationDialogRaw({ open, chekoutClose, setOpen }) {
+  const history = useHistory();
 
 const { cart, vaciarCarrito } = useContext(CartContext);
 
 const [finalizada, setFinalizada] = useState(false);
 function handleClose() {
         setFinalizada(false);
-        window.location.reload();
+        history.goBack();
 }
 
 const [inputNombre, setInputNombre] = useState("");
@@ -169,7 +170,6 @@ const [inputValida, setInputValida] = useState("");
       message="Compra procesada con éxito"
       onClose={handleClose}
     /> 
-      {redirectToHome && <Redirect to='/' />}
 
     </>
   )
