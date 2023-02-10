@@ -87,11 +87,12 @@ const Cart = ({ handleClose, open }) => {
             </ListItemText>           
         </ListItem>
         ))}
-        <ListItem>
+        <ListItem>       
         {cart.map(item => {totales += parseInt(item.price)}).join('')};
+        {cart.length === 0 ? (<p></p>) : (
         <Typography sx={{ ml: 2, flex: 1 }} variant="h4" component="div">
         Total: $ {totales}
-        </Typography>
+        </Typography>)}
         </ListItem>
         </List>
         <ListItem>
