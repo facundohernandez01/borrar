@@ -40,7 +40,8 @@ function App() {
         <Route path='/' element={<><Slider/><ItemListContainer/></>}/>
         <Route path='/categoria/:categoria' element={<><Slider/><ItemListContainer/></>}/>
         <Route path="/productos/:id" element={<ItemDetail />} />
-        <Route path="*" component={<Page404/>} />
+        <Route path="*" element={<Page404 />} />
+
         </Routes>
 
         </Grid>
