@@ -25,6 +25,8 @@ const [finalizada, setFinalizada] = useState(false);
 function handleClose() {
         setFinalizada(false);
         window.history.back(-1);
+        window.location.reload();
+
 }
 
 const [inputNombre, setInputNombre] = useState("");
