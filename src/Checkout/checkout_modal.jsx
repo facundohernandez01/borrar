@@ -14,21 +14,17 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import { Snackbar } from '@mui/material';
-import { useHistory } from 'react-router-dom';
-
-  const [redirectToHome, setRedirectToHome] = useState(false);
 
 
 
 export function ConfirmationDialogRaw({ open, chekoutClose, setOpen }) {
-  const history = useHistory();
 
 const { cart, vaciarCarrito } = useContext(CartContext);
 
 const [finalizada, setFinalizada] = useState(false);
 function handleClose() {
         setFinalizada(false);
-        history.goBack();
+        window.history.back();
 }
 
 const [inputNombre, setInputNombre] = useState("");
