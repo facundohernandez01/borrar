@@ -89,7 +89,9 @@ const Cart = ({ handleClose, open }) => {
         ))}
         <ListItem>
         {cart.map(item => {totales += parseInt(item.price)}).join('')};
-        {totales}
+        <Typography sx={{ ml: 2, flex: 1 }} variant="h1" component="div">
+        $ {totales}
+        </Typography>
         </ListItem>
         </List>
         <ListItem>
