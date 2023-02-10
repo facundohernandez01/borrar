@@ -8,7 +8,6 @@ import { Box, Grid, Container, Button } from '@mui/material';
 import ResponsiveAppBar from './NavBar/index.jsx'
 import { useState } from "react";
 import ItemDetail from "./ItemDetail";
-import ConfirmationDialogRaw from "./Checkout";
 
 import Slider from './Slider'
 import './index.css';
@@ -41,7 +40,6 @@ function App() {
         <Route path='/' element={<><Slider/><ItemListContainer/></>}/>
         <Route path='/categoria/:categoria' element={<><Slider/><ItemListContainer/></>}/>
         <Route path="/productos/:id" element={<ItemDetail />} />
-        <Route path="/checkout" element={<ConfirmationDialogRaw />} />
 
         </Routes>
 
