@@ -24,7 +24,6 @@ const { cart, vaciarCarrito } = useContext(CartContext);
 const [finalizada, setFinalizada] = useState(false);
 function handleClose() {
         setFinalizada(false);
-        window.history.back(-1);
         window.location.reload();
 
 }
