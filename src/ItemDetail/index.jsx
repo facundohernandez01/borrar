@@ -50,7 +50,7 @@ const ItemDetail = () => {
     if (location.pathname === '/productos/' && !location.search) {
       return <div>La ruta está vacía</div>;
     }
-    
+    console.log(location.pathname)
   return (
     <div>
        <Box
