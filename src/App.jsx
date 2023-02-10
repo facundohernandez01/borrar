@@ -36,13 +36,11 @@ function App() {
         }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
         <Routes>
-        <Switch>
         <Route exact path='/form' element={<Form/>}/>
         <Route path='/' element={<><Slider/><ItemListContainer/></>}/>
         <Route path='/categoria/:categoria' element={<><Slider/><ItemListContainer/></>}/>
         <Route path="/productos/:id" element={<ItemDetail />} />
         <Route path="*" component={<Page404/>} />
-        </Switch>
         </Routes>
 
         </Grid>
