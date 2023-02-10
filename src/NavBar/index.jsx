@@ -44,7 +44,7 @@ function ResponsiveAppBar({handleClickOpen, open}) {
             href=""
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none', lg: 'none' },
+              display: { xs: 'none', md: 'flex', lg: 'flex' },
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
