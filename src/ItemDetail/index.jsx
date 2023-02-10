@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { CartContext } from "../Context"
-import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { useParams, useNavigate, Navigate, useLocation } from "react-router-dom";
 import db from "../../db/firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
 import Button from '@mui/material/Button';
@@ -23,9 +23,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ItemDetail = () => {
   const {  addCart, loading, setLoading } = useContext(CartContext);
-
   const { id } = useParams();
   const navigate = useNavigate();
+  let location = useLocation();
   const [ItemsList, setItem] = useState({});
 
   const getItem = async (id) => {
@@ -47,10 +47,9 @@ const ItemDetail = () => {
       setValue(event.target.value);
     };
 
-    if (!id) {
+    if (location.pathname === '/productos/' && !location.search) {
       return <div>La ruta está vacía</div>;
     }
-  
     
   return (
     <div>
