@@ -31,7 +31,7 @@ const Cart = ({ handleClose, open }) => {
   const chekoutClose = () => {
     setOpen(false);
   };
-
+  let totales = 0
   const { vaciarCarrito, cart, eliminaItem } = useContext(CartContext) 
 
     return (
@@ -80,16 +80,17 @@ const Cart = ({ handleClose, open }) => {
                     id="outlined-number"
                     label="cant"
                     value={item.cantidad}
-
           ></TextField>
             <TextField  sx={{width: 90, margin:1 }}label="$" value={item.price}/>
             <ListItemText sx={{alignContent: 'left'}} 
             item={item} key={item.id} primary={item.title} secondary={item.categoria}>
             </ListItemText>           
-
         </ListItem>
         ))}
-
+        <ListItem>
+        {cart.map(item => {totales += item.price;})};
+        {totales}
+        </ListItem>
         </List>
         <ListItem>
         {cart.length === 0 ? (<ListItemText>No hay artículos en el carrito</ListItemText>) : (
