@@ -53,7 +53,7 @@ function ResponsiveAppBar({handleClickOpen, open}) {
               textDecoration: 'none',
             }}
           >
-        LOGO
+        CoderStore
         </Typography>
 
       <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', lg: 'none'  } }}>
