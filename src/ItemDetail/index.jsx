@@ -47,6 +47,11 @@ const ItemDetail = () => {
       setValue(event.target.value);
     };
 
+    if (!id) {
+      return <div>La ruta está vacía</div>;
+    }
+  
+    
   return (
     <div>
        <Box
