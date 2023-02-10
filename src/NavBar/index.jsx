@@ -38,7 +38,7 @@ function ResponsiveAppBar({handleClickOpen, open}) {
 <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <Button component={RouterLink} to="/">LOGO</Button>
+        <Button variant='text' component={RouterLink} to="/">LOGO</Button>
 
         </Typography>
 
