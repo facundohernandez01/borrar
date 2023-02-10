@@ -79,11 +79,8 @@ const Cart = ({ handleClose, open }) => {
           }}
                     id="outlined-number"
                     label="cant"
-                    type="number"
                     value={item.cantidad}
-                    InputLabelProps={{
-                    shrink: true,
-                    }}
+
           ></TextField>
             <TextField  sx={{width: 90, margin:1 }}label="$" value={item.price}/>
             <ListItemText sx={{alignContent: 'left'}} 
