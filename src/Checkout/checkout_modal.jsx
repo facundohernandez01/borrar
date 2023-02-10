@@ -14,7 +14,7 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import { Snackbar } from '@mui/material';
-import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom/es/Redirect';
 
   const [redirectToHome, setRedirectToHome] = useState(false);
 
