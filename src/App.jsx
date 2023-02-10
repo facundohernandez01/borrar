@@ -8,7 +8,7 @@ import { Box, Grid, Container, Button } from '@mui/material';
 import ResponsiveAppBar from './NavBar/index.jsx'
 import { useState } from "react";
 import ItemDetail from "./ItemDetail";
-import Page404 from './Page404'
+import Page404 from './Page404.jsx'
 import Slider from './Slider'
 import './index.css';
 
