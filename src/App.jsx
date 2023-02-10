@@ -40,6 +40,7 @@ function App() {
         <Route path='/' element={<><Slider/><ItemListContainer/></>}/>
         <Route path='/categoria/:categoria' element={<><Slider/><ItemListContainer/></>}/>
         <Route path="/productos/:id" element={<ItemDetail />} />
+        <Route path="/error404" element={<Page404 />} />
         <Route path="*" element={<Page404 />} />
 
         </Routes>
