@@ -14,6 +14,11 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import { Snackbar } from '@mui/material';
+import { Redirect } from 'react-router-dom';
+
+  const [redirectToHome, setRedirectToHome] = useState(false);
+
+
 
 export function ConfirmationDialogRaw({ open, chekoutClose, setOpen }) {
 
@@ -61,6 +66,8 @@ const [inputValida, setInputValida] = useState("");
     setOpen(false);
     vaciarCarrito();
     setFinalizada(true);
+    setRedirectToHome(true);
+
   };
 
   React.useEffect(() => {
@@ -162,6 +169,7 @@ const [inputValida, setInputValida] = useState("");
       message="Compra procesada con éxito"
       onClose={handleClose}
     /> 
+      {redirectToHome && <Redirect to='/' />}
 
     </>
   )
