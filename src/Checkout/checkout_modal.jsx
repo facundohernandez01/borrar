@@ -65,7 +65,6 @@ const [inputValida, setInputValida] = useState("");
     setOpen(false);
     vaciarCarrito();
     setFinalizada(true);
-    setRedirectToHome(true);
 
   };
 
