@@ -69,7 +69,6 @@ const [documentId, setDocumentId] = useState(null);
     setOpen(false);
     vaciarCarrito();
     setFinalizada(true);
-    mostrarOrden()
   };
 
   React.useEffect(() => {
@@ -78,11 +77,7 @@ const [documentId, setDocumentId] = useState(null);
     }
   }, [open]);
 
-  const mostrarOrden = async (e) => {
-    const documentId = await createItem(e);
-    return (documentId)
-    console.log("ID del documento creado: ", documentId);
-  };
+
 
 
   const handleCancel = () => {
