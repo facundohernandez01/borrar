@@ -50,15 +50,7 @@ const ItemDetail = () => {
 
   return (
     <>
-      <Grid container spacing={2}>
-      <Grid xs={12} md={12} lg={12}>
-        <Item>
-          <Typography variant="h5" color="primary.dark" component="h5">
-        {ItemsList.title}
-        </Typography>
-        </Item>
-      </Grid>
-      </Grid>
+
 
   <Grid container spacing={4}>
 
