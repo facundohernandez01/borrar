@@ -204,7 +204,7 @@ const [documentId, setDocumentId] = useState(null);
       
       <Snackbar
       open={finalizada}
-      autoHideDuration={3000}
+      autoHideDuration={5000}
       message={"Compra procesada con éxito. Su nro de orden es: "+documentId}
       onClose={handleClose}
     /> 
