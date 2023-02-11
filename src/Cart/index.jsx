@@ -56,10 +56,7 @@ const Cart = ({ handleClose, open }) => {
               Carrito
             </Typography>
             <Button variant="outlined" autoFocus color="inherit" onClick={() =>vaciarCarrito()} startIcon={<DeleteIcon />}>
-            Vaciar carrito
-            </Button>
-            <Button variant="outlined" autoFocus color="inherit" onClick={handleClose}>
-              Cerrar
+            Vaciar
             </Button>
           </Toolbar>
         </AppBar>
