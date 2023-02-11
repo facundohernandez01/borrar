@@ -79,6 +79,7 @@ const [inputValida, setInputValida] = useState("");
 
   const mostrarOrden = async (e) => {
     const documentId = await createItem(e);
+    return (documentId)
     console.log("ID del documento creado: ", documentId);
   };
 
