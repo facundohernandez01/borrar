@@ -102,8 +102,9 @@ const [inputValida, setInputValida] = useState("");
       <Box
       sx={{
         display: 'flex',
+        minWidth: 200,
         alignItems: 'center',
-        '& > :not(style)': { m: 4 },
+        '& > :not(style)': { m: 1 },
       }}
     >
     <FormControl variant="standard">
