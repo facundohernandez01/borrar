@@ -107,7 +107,7 @@ const [inputValida, setInputValida] = useState("");
         '& > :not(style)': { m: 1 },
       }}
     >
-    <FormControl variant="standard">
+    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
         <InputLabel htmlFor="Nombre y apellido">
         Nombre y apellido
         </InputLabel>
@@ -154,7 +154,7 @@ const [inputValida, setInputValida] = useState("");
         '& > :not(style)': { m: 1 },
       }}
     >
-    <FormControl variant="standard">
+    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
     <InputLabel htmlFor="Email">Email</InputLabel>
      <Input
           id="Email"
@@ -176,7 +176,7 @@ const [inputValida, setInputValida] = useState("");
               '& > :not(style)': { m: 1 },
             }}
             >
-    <FormControl variant="standard">
+    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
         <InputLabel htmlFor="repetir-email">Repetir email</InputLabel>
         <Input
           id="repetir-email"
