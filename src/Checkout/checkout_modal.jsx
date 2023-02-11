@@ -59,7 +59,8 @@ const [inputValida, setInputValida] = useState("");
         cantidad: item.cantidad
       };
     });
-    await addDoc(itemsCollectionRef, carrito);
+    const documentRef = await addDoc(itemsCollectionRef, carrito);
+    const documentId = documentRef.id;
     setInputNombre("");
     setInputEmail("");
     setInputValida("");
@@ -203,7 +204,7 @@ const [inputValida, setInputValida] = useState("");
       <Snackbar
       open={finalizada}
       autoHideDuration={3000}
-      message="Compra procesada con éxito"
+      message={"Compra procesada con éxito. Su nro de orden es: "+documentId}
       onClose={handleClose}
     /> 
 
