@@ -14,7 +14,9 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import { Snackbar } from '@mui/material';
-
+import InputAdornment from '@mui/material/InputAdornment';
+import Input from '@mui/material/Input';
+import Person3Icon from '@mui/icons-material/Person3';
 
 
 export function ConfirmationDialogRaw({ open, chekoutClose, setOpen }) {
@@ -103,16 +105,21 @@ const [inputValida, setInputValida] = useState("");
         '& > :not(style)': { m: 1 },
       }}
     >
-      <FormControl>
-        <InputLabel htmlFor="component-outlined">Nombre</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
+    <FormControl variant="standard">
+        <InputLabel htmlFor="Nombre y apellido">
+        Nombre y apellido
+        </InputLabel>
+        <Input
+          id="Nombre-y-apellido"
           value={inputNombre}
-          label="Nombre"
           onChange={(e) => setInputNombre(e.target.value)}
-
+          startAdornment={
+            <InputAdornment position="start">
+              <Person3Icon />
+            </InputAdornment>
+          }
         />
-    </FormControl>
+      </FormControl>
     <FormControl>
         <InputLabel htmlFor="component-outlined">Teléfono</InputLabel>
         <OutlinedInput
