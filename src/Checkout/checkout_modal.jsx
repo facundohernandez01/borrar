@@ -17,7 +17,8 @@ import { Snackbar } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import Input from '@mui/material/Input';
 import Person3Icon from '@mui/icons-material/Person3';
-
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 export function ConfirmationDialogRaw({ open, chekoutClose, setOpen }) {
 
@@ -120,17 +121,30 @@ const [inputValida, setInputValida] = useState("");
           }
         />
       </FormControl>
-    <FormControl>
-        <InputLabel htmlFor="component-outlined">Teléfono</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
-          value={inputTel}
-          label="Teléfono"
-          onChange={(e) => setInputTel(e.target.value)}
-
-        />
-    </FormControl>
     </Box>
+    <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            '& > :not(style)': { m: 1 },
+          }}
+          >
+    <FormControl variant="standard">
+        <InputLabel htmlFor="Teléfono">
+        Teléfono
+       </InputLabel>
+        <Input
+          id="telefono"
+          value={inputTel}
+          onChange={(e) => setInputTel(e.target.value)}
+          startAdornment={
+            <InputAdornment position="start">
+              <LocalPhoneIcon />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      </Box>
     <Box
       sx={{
         display: 'flex',
@@ -138,15 +152,28 @@ const [inputValida, setInputValida] = useState("");
         '& > :not(style)': { m: 1 },
       }}
     >
-    <FormControl>
-        <InputLabel htmlFor="component-outlined">Email</InputLabel>
-        <OutlinedInput
+    <FormControl variant="standard">
+    <InputLabel htmlFor="component-outlined">Email</InputLabel>
+     <OutlinedInput
           id="component-outlined"
           value={inputEmail}
-          label="Email"
           onChange={(e) => setInputEmail(e.target.value)}
+          startAdornment={
+            <InputAdornment position="start">
+              <AlternateEmailIcon />
+            </InputAdornment>
+          }
         />
       </FormControl>
+
+      </Box>
+      <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              '& > :not(style)': { m: 1 },
+            }}
+            >
       <FormControl>
         <InputLabel htmlFor="component-outlined">Repetir email</InputLabel>
         <OutlinedInput
@@ -154,6 +181,11 @@ const [inputValida, setInputValida] = useState("");
           value={inputValida}
           label="Repetir email"
           onChange={(e) => setInputValida(e.target.value)}
+          startAdornment={
+            <InputAdornment position="start">
+              <AlternateEmailIcon />
+            </InputAdornment>
+          }
         />
       </FormControl>
       </Box>
