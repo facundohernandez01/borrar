@@ -94,7 +94,7 @@ const [inputValida, setInputValida] = useState("");
     <>
     <Dialog
       sx={{ '& .MuiDialog-paper': { width: '90%', maxHeight: 435 } }}
-      maxWidth="xs"
+      maxWidth="sm"
       open={open}
     >
       <DialogTitle>Confirmación de compra</DialogTitle>
@@ -112,6 +112,7 @@ const [inputValida, setInputValida] = useState("");
         </InputLabel>
         <Input
           id="Nombre-y-apellido"
+          fullWidth
           value={inputNombre}
           onChange={(e) => setInputNombre(e.target.value)}
           startAdornment={
@@ -153,7 +154,7 @@ const [inputValida, setInputValida] = useState("");
       }}
     >
     <FormControl variant="standard">
-    <InputLabel htmlFor="Email"></InputLabel>
+    <InputLabel htmlFor="Email">Email</InputLabel>
      <Input
           id="Email"
           value={inputEmail}
