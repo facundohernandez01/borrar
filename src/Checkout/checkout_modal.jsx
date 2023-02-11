@@ -35,6 +35,7 @@ const [inputNombre, setInputNombre] = useState("");
 const [inputTel, setInputTel] = useState("");
 const [inputEmail, setInputEmail] = useState("");
 const [inputValida, setInputValida] = useState("");
+const [documentId, setDocumentId] = useState(null);
 
  const createItem = async (e) => {
     if (inputEmail !== inputValida) {
@@ -60,7 +61,7 @@ const [inputValida, setInputValida] = useState("");
       };
     });
     const documentRef = await addDoc(itemsCollectionRef, carrito);
-    const documentId = documentRef.id;
+    setDocumentId(documentRef.id);
     setInputNombre("");
     setInputEmail("");
     setInputValida("");
