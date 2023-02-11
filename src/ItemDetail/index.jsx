@@ -57,8 +57,8 @@ const ItemDetail = () => {
       {loading ? (
       <Skeleton sx={{ height: 290, width: 500, minWidth:500}} animation="wave" variant="rectangular" />
       ) : ( 
-        <Item sx={{maxWidth: 40}}>
-        <img src={ItemsList.image_url}></img>
+        <Item >
+        <img sx={{maxWidth: 40}} src={ItemsList.image_url}></img>
        </Item>
             )}
      </Grid> 
