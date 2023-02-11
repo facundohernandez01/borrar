@@ -102,7 +102,6 @@ const [inputValida, setInputValida] = useState("");
       <Box
       sx={{
         display: 'flex',
-        width: '300px',
         alignItems: 'center',
         '& > :not(style)': { m: 1 },
       }}
