@@ -9,15 +9,15 @@ height: 90px;
 
 }
 
-.itemThumb{
+/* .itemThumb{
 max-height: 400px;   
 max-width: 400px;
 min-height: 400px;
 min-width: 400px;
-}
+} */
 
 @media (max-width: 6in) {
    .imgCart {
-     max-width: 50%;
+     max-width: 45px;
    }
  }
