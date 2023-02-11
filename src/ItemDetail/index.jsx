@@ -14,8 +14,7 @@ import Skeleton from '@mui/material/Skeleton';
 
 const Item = styled(Paper)(({ theme }) => ({
 
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff'
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
@@ -53,7 +52,6 @@ const ItemDetail = () => {
 
 
   <Grid container spacing={4}>
-
       <Grid item xs={12} md={6} lg={7} >
       {loading ? (
       <Skeleton sx={{ height: 290, width: 500, minWidth:500}} animation="wave" variant="rectangular" />
