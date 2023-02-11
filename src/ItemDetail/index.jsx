@@ -52,7 +52,7 @@ const ItemDetail = () => {
     <>
 
 
-  <Grid container spacing={4} sx={{py: 400}}>
+  <Grid container spacing={4} sx={{py: 50}}>
       <Grid item xs={12} md={6} lg={7} >
       {loading ? (
       <Skeleton sx={{ height: 290, width: 500, minWidth:500}} animation="wave" variant="rectangular" />
