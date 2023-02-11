@@ -49,11 +49,11 @@ const ItemDetail = () => {
 
 
   return (
-    <div>
+    <>
       <Grid container spacing={2}>
-      <Grid xs={12} md={6} lg={7}>
+      <Grid xs={12} md={10} lg={10}>
         <Item>
-          <Typography variant="h3" color="primary.dark" component="h3">
+          <Typography variant="h2" color="primary.dark" component="h2">
         {ItemsList.title}
         </Typography>
         </Item>
@@ -120,8 +120,7 @@ const ItemDetail = () => {
 
      </Grid>
    </Grid>
-
-</div>
+</>
   );
 };
 
