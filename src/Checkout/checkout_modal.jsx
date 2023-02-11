@@ -68,7 +68,7 @@ const [inputValida, setInputValida] = useState("");
     setOpen(false);
     vaciarCarrito();
     setFinalizada(true);
-
+    mostrarOrden()
   };
 
   React.useEffect(() => {
@@ -77,6 +77,10 @@ const [inputValida, setInputValida] = useState("");
     }
   }, [open]);
 
+  const mostrarOrden = async (e) => {
+    const documentId = await createItem(e);
+    console.log("ID del documento creado: ", documentId);
+  };
 
 
   const handleCancel = () => {
