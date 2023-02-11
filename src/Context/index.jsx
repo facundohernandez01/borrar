@@ -19,8 +19,12 @@ function CartProvider({ children }) {
       useEffect(() => {
         getItems();
       }, []);
-
-      const [cart, setCart] = useState([]);
+      
+      useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }, [cart]);
+      // const [cart, setCart] = useState([]);
+      const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
       const addCart = (id, value) => {
         const posicion = cart.findIndex(item => item.id === id);
         if (posicion === -1) {
@@ -45,6 +49,8 @@ function CartProvider({ children }) {
         setCart(newCart);
     }
 
+
+    
   return (
     <CartContext.Provider value={{cart, ItemsList, vaciarCarrito, setItems, loading, setLoading, addCart, getSumaCart, eliminaItem }}>
       {children}
