@@ -93,7 +93,7 @@ const [inputValida, setInputValida] = useState("");
   return (
     <>
     <Dialog
-      sx={{ '& .MuiDialog-paper': { width: '80%', maxHeight: 435 } }}
+      sx={{ '& .MuiDialog-paper': { width: '90%', maxHeight: 435 } }}
       maxWidth="xs"
       open={open}
     >
@@ -153,9 +153,9 @@ const [inputValida, setInputValida] = useState("");
       }}
     >
     <FormControl variant="standard">
-    <InputLabel htmlFor="component-outlined">Email</InputLabel>
-     <OutlinedInput
-          id="component-outlined"
+    <InputLabel htmlFor="Email"></InputLabel>
+     <Input
+          id="Email"
           value={inputEmail}
           onChange={(e) => setInputEmail(e.target.value)}
           startAdornment={
@@ -174,10 +174,10 @@ const [inputValida, setInputValida] = useState("");
               '& > :not(style)': { m: 1 },
             }}
             >
-      <FormControl>
-        <InputLabel htmlFor="component-outlined">Repetir email</InputLabel>
-        <OutlinedInput
-          id="component-outlined"
+    <FormControl variant="standard">
+        <InputLabel htmlFor="repetir-email">Repetir email</InputLabel>
+        <Input
+          id="repetir-email"
           value={inputValida}
           label="Repetir email"
           onChange={(e) => setInputValida(e.target.value)}
