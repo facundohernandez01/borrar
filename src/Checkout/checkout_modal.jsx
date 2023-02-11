@@ -94,7 +94,7 @@ const [inputValida, setInputValida] = useState("");
     <>
     <Dialog
       sx={{ '& .MuiDialog-paper': { width: '90%', maxHeight: 435 } }}
-      maxWidth="sm"
+      maxWidth="xs"
       open={open}
     >
       <DialogTitle>Confirmación de compra</DialogTitle>
