@@ -47,21 +47,19 @@ const ItemDetail = () => {
       setValue(event.target.value);
     };
 
-    if (location.pathname === '/productos/' && !location.search) {
-      return <div>La ruta está vacía</div>;
-    }
-    console.log(location.pathname)
+
   return (
     <div>
-       <Box
-      sx={{ 
-      flexGrow: 4,
-      marginTop: 3
-      }}>
-      <Typography variant="h3" color="primary.dark" component="h3">
-      {ItemsList.title}
-      </Typography>
-      </Box>
+      <Grid container spacing={2}>
+      <Grid xs={12} md={6} lg={7}>
+        <Item>
+          <Typography variant="h3" color="primary.dark" component="h3">
+        {ItemsList.title}
+        </Typography>
+        </Item>
+      </Grid>
+      </Grid>
+
   <Grid container spacing={4}>
 
       <Grid item xs={12} md={6} lg={7} >
