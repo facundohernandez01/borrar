@@ -51,9 +51,9 @@ const ItemDetail = () => {
   return (
     <>
       <Grid container spacing={2}>
-      <Grid xs={12} md={10} lg={10}>
+      <Grid xs={12} md={12} lg={12}>
         <Item>
-          <Typography variant="h2" color="primary.dark" component="h2">
+          <Typography variant="h5" color="primary.dark" component="h5">
         {ItemsList.title}
         </Typography>
         </Item>
